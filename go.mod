@@ -1,6 +1,6 @@
 module github.com/ElmTheDev/jup-ag
 
-go 1.18
+go 1.17
 
 require (
 	github.com/gagliardetto/binary v0.6.1

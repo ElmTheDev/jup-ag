@@ -6,13 +6,13 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/ElmTheDev/jup-ag"
 	bin "github.com/gagliardetto/binary"
 	"github.com/gagliardetto/solana-go"
 	"github.com/gagliardetto/solana-go/rpc"
 	confirm "github.com/gagliardetto/solana-go/rpc/sendAndConfirmTransaction"
 	"github.com/gagliardetto/solana-go/rpc/ws"
 	"github.com/joho/godotenv"
-	"github.com/jtomada/jup-ag"
 )
 
 var mintAddressMainnet = map[string]string{
