@@ -1,4 +1,4 @@
-module github.com/jtomada/jup-ag
+module github.com/ElmTheDev/jup-ag
 
 go 1.18
 
