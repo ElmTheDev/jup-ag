@@ -81,7 +81,6 @@ func GetSwapTransactions(swap *SwapRequest) (*SwapResponse, error) {
 	if err != nil {
 		return nil, err
 	}
-	fmt.Printf("%+v\n", *s)
 
 	return s, nil
 }
@@ -122,7 +121,6 @@ func GetQuote(qr *QuoteRequest) (*Quote, error) {
 	}
 
 	qurl.RawQuery = params.Encode()
-	fmt.Printf("Encoded URL is %q\n", qurl.String())
 
 	r, err := http.Get(qurl.String())
 	if err != nil {
@@ -135,7 +133,6 @@ func GetQuote(qr *QuoteRequest) (*Quote, error) {
 	if err != nil {
 		return nil, err
 	}
-	fmt.Printf("%+v\n", *quote)
 
 	return quote, nil
 }
@@ -171,7 +168,6 @@ func GetIndexedRouteMap(onlyDirectRoutes bool) (*IndexedRouteMapResponse, error)
 	if err != nil {
 		return nil, err
 	}
-	fmt.Printf("len route map: %d\n", len(imap.IndexedRouteMap))
 
 	return imap, nil
 }
@@ -213,7 +209,6 @@ func GetPrice(p *PriceRequest) (*Price, error) {
 	params.Add("amount", a)
 
 	purl.RawQuery = params.Encode()
-	fmt.Printf("Encoded URL is %q\n", purl.String())
 
 	r, err := http.Get(purl.String())
 	if err != nil {
@@ -226,7 +221,6 @@ func GetPrice(p *PriceRequest) (*Price, error) {
 	if err != nil {
 		return nil, err
 	}
-	fmt.Printf("%+v\n", *price)
 
 	return price, nil
 }
